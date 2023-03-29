@@ -34,11 +34,11 @@
   <div id="right">
   <form action="/updateArtist" method="post">
       <input type="text"name="id"th:value="${artist.id}">
-      <input type="text"name="id"th:value="${artist.first_name}">
-      <input type="text"name="id"th:value="${artist.last_name}">
-      <input type="text"name="id"th:value="${artist.tracks}">
-      <input type="text"name="id"th:value="${artist.year_of_publication}">
-      <input type="text"name="id"th:value="${artist.record_label}">
+      <input type="text"name="first_name"th:value="${artist.first_name}">
+      <input type="text"name="last_name"th:value="${artist.last_name}">
+      <input type="text"name="tracks"th:value="${artist.tracks}">
+      <input type="text"name="year_of_publication"th:value="${artist.year_of_publication}">
+      <input type="text"name="record_label"th:value="${artist.record_label}">
       <input type="submit"value="save change"style="background-color: blue">
 
   </form>
