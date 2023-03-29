@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<link rel="stylesheet"type="text/css"href="MyCSS.css">
+</head>
+<body>
+<h1>Isaac Andersen website</h1>
+<a href="/create">
+    <button class="bth-create, bth" id="bth-create">add a new artist</button>
+</a>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>Tracks</th>
+        <th>year of publication</th>
+        <th> recorde label</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="artist: ${artists}">
+        <td th:text="${artist.id}"/>
+        <td th:text="${artist.first_name}"/>
+        <td th:text="${artist.last_name}"/>
+        <td th:text="${artist.tracks}"/>
+        <td th:text="${artist.year_of_publication}"/>
+        <td th:text="${artist.record_label}"/>
+       <td>
+           <a th:href="@{'/viewOne/'+${artist.id}}">
+        <button class="bth-viewOne"id="bth-viewOne">View Artist</button>
+           </a>
+           <a th:href="@{'/delet/'+${artist.id}}">
+               <button class="bth-viewOne"id="bth-delet">Delete Artist</button>
+           </a>
+           <a th:href="@{'/updateOne/'+${artist.id}}">
+               <button class="bth-viewOne"id="bth-updateOne">Update Artist</button>
+           </a>
+
+       </td>
+    </tr>
+    </tbody>
+</table>
+
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    #wrapper{
+        height:300px;
+        width:450px;
+        border: 1px solid black;
+        margin: auto;
+        padding: 4px;
+    }
+    #left{
+        width: 220px;
+        float: left;
+        border: 1px solid blue;
+        padding: 4px;
+
+    }
+    #right{
+        width: 220px;
+        float: left;
+        border: 1px solid blue;
+        padding: 4px;
+    }
+
+</style>
+<body>
+<h1>Update successfully</h1>
+ <div id="wrapper">
+  <div id="left">
+  <div id="right">
+  <form action="/updateArtist" method="post">
+      <input type="text"name="id"th:value="${artist.id}">
+      <input type="text"name="id"th:value="${artist.first_name}">
+      <input type="text"name="id"th:value="${artist.last_name}">
+      <input type="text"name="id"th:value="${artist.tracks}">
+      <input type="text"name="id"th:value="${artist.year_of_publication}">
+      <input type="text"name="id"th:value="${artist.record_label}">
+      <input type="submit"value="save change"style="background-color: blue">
+
+  </form>
+  </div>
+  </div>
+
+
+ </div>
+</body>
+</html>
